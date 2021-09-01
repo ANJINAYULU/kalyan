@@ -1,0 +1,35 @@
+we are going to create the vpc useing the terraform 
+provider: aws 
+region:
+resource: vpc
+cidr : 10.1.0.0/16
+enable dns = true
+
+subnets
+pubsubnet = ["10.1.0.0/24","10.1.1.0/24","10.1.2.0/24"]
+enable 
+privatesubnet = ["10.1.3.0/24","10.1.4.0/24","10.1.5.0/24"]
+datasubnet = ["10.1.6.0/24","10.1.7.0/24","10.1.8.0/24"]
+
+igw = 
+attach =
+
+
+eip=
+nat = pubsubnet [0]
+route table
+pub route
+private route
+
+
+
+pubsubnet  associate with igw in public route
+private subnet associate with nat-gw in private route
+
+
+
+terraform init
+terraform plan
+terraform apply
+
+
